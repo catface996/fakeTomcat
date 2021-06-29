@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90417d5a-ff40-4c6b-ba4b-ee881051e171" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/BossGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/MainStarter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/SelectorGroupThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/WorkGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/http/HttpInvoker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/http/HttpMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/executor/TaskInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/executor/WorkerExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/executor/WorkerRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/BossGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/server/BossGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/MainStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/MainStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/SelectorGroupThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/server/SelectorGroupThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/WorkGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fake/tomcat/server/WorkGroup.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +28,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1uNNzSY0hT67IWdhMSzpgULSjmu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -93,7 +101,8 @@
       <option name="presentableId" value="Default" />
       <updated>1624502351440</updated>
       <workItem from="1624502352677" duration="1959000" />
-      <workItem from="1624600822306" duration="855000" />
+      <workItem from="1624600822306" duration="974000" />
+      <workItem from="1624859059710" duration="2936000" />
     </task>
     <task id="LOCAL-00001" summary="[新增功能](main): 初始化工程.">
       <created>1624503337224</created>
@@ -109,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624504238550</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[新增功能](main): 完成接收socket请求.">
+      <created>1624601737922</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1624601737922</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +133,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[新增功能](main): 初始化工程." />
-    <option name="LAST_COMMIT_MESSAGE" value="[新增功能](main): 初始化工程." />
+    <MESSAGE value="[新增功能](main): 完成接收socket请求." />
+    <option name="LAST_COMMIT_MESSAGE" value="[新增功能](main): 完成接收socket请求." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

@@ -1,11 +1,15 @@
-package com.fake.tomcat;
+package com.fake.tomcat.server;
 
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
+import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 import java.util.concurrent.LinkedBlockingDeque;
+
+import com.fake.tomcat.executor.TaskInfo;
+import com.fake.tomcat.executor.WorkerExecutor;
 
 /**
  * @author by catface
@@ -16,6 +20,7 @@ public class SelectorGroupThread extends Thread {
     private final LinkedBlockingDeque<SocketChannel> socketNeedRegister;
     int socketNum = 0;
     private Selector selector;
+    private WorkerExecutor workerExecutor;
 
     public SelectorGroupThread() {
         socketNeedRegister = new LinkedBlockingDeque<>();
@@ -69,6 +74,8 @@ public class SelectorGroupThread extends Thread {
                     buffer.get(data, 0, buffer.limit());
                     sb.append(new String(data));
                 } else if (num == 0) {
+                    TaskInfo taskInfo = new TaskInfo(channel, sb.toString().getBytes(StandardCharsets.UTF_8));
+                    workerExecutor.execute(taskInfo);
                     System.out.println(sb);
                     break;
                 } else {

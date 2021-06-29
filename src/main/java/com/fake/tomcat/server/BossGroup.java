@@ -1,4 +1,4 @@
-package com.fake.tomcat;
+package com.fake.tomcat.server;
 
 import java.net.InetSocketAddress;
 import java.nio.channels.ServerSocketChannel;

@@ -1,4 +1,4 @@
-package com.fake.tomcat;
+package com.fake.tomcat.server;
 
 import java.nio.channels.SocketChannel;
 import java.util.concurrent.atomic.AtomicInteger;
